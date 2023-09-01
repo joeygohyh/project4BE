@@ -17,7 +17,7 @@ const registrationValidators = {
         "any.required": "Password is required.",
       }),
     country: Joi.string().required(), // New validation for country
-    gender: Joi.string().valid("Male", "Female", "Other").required(), // New validation for gender
+    gender: Joi.string().valid("male", "female", "other").required(), // New validation for gender
   }),
 };
 
