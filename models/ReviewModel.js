@@ -6,7 +6,7 @@ const reviewSchema = new mongoose.Schema(
       username: { type: String, required: true },
       gender: {
         type: String,
-        enum: ["Male", "Female", "Other"],
+        enum: ["male", "female", "other"],
         required: true,
       },
     },

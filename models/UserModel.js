@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema(
     password: { type: String, required: true },
     profilePicture: { type: String, required: true },
     country: { type: String, required: true }, // New field for country
-    gender: { type: String, enum: ["Male", "Female", "Other"], required: true }, // New field for gender
+    gender: { type: String, enum: ["male", "female", "other"], required: true }, // New field for gender
   },
   {
     timestamps: true,
