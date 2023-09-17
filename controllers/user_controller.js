@@ -13,62 +13,6 @@ const userLoginValidators = require("./validators/userLoginValidator");
 const editProfileValidators = require("./validators/editProfileValidator");
 
 const userControllers = {
-  // register: async (req, res) => {
-  //   // get the registration data
-  //   const data = req.body;
-
-  //   // validate the registration data
-  //   const validationResult =
-  //     userRegistrationValidators.registerSchema.validate(data);
-  //   if (validationResult.error) {
-  //     res.statusCode = 400;
-
-  //     return res.json({
-  //       msg: validationResult.error.details[0].message,
-  //     });
-  //   }
-
-  //   // search for any existing registered email, return err if so
-  //   try {
-  //     const user = await userModel.findOne({ email: data.email });
-  //     if (user) {
-  //       res.statusCode = 400;
-  //       return res.json({
-  //         msg: "user with email exists, use another email",
-  //       });
-  //     }
-  //   } catch (err) {
-  //     res.statusCode = 500;
-  //     return res.json({
-  //       msg: "failed to check for duplicates",
-  //     });
-  //   }
-
-  //   // apply hashing algo (bcrypt) to given password. Harsh the pw & store in DB
-  //   const hash = await bcrypt.hash(data.password, 10);
-
-  //   // use user model to create a new user
-  //   try {
-  //     await userModel.create({
-  //       profilePicture: data.profilePicture,
-  //       name: data.name,
-  //       username: data.username,
-  //       email: data.email,
-  //       password: hash,
-  //       country: data.country, // Add country field
-  //       gender: data.gender, // Add gender field
-  //     });
-  //   } catch (err) {
-  //     res.statusCode = 500;
-  //     return res.json({
-  //       msg: "failed to create user",
-  //     });
-  //   }
-
-  //   // return response
-  //   res.json();
-  // },
-
   register: async (req, res) => {
     // Get the registration data from the request body
     const data = req.body;
